@@ -12,7 +12,7 @@ Building = ""
 Room = ""
 Phone = "053-950-"
 IP = socket.gethostbyname(socket.getfqdn())
-MAC = getmac.get_mac_address().upper()
+MAC = getmac.get_mac_address(interface=None, ip=IP, ip6=None, hostname=None, network_request=True).upper()
 MAC = MAC.replace(':', '-')
 
 def main():
@@ -39,7 +39,7 @@ def saveInfo():
     sheet = workbook.active
     sheet.append([User, UserID, Responsibility, ResponsibilityID, "PC", IP, MAC, Building, Room, Phone])
     workbook.save(FILE)
-    print("\nSaved Successfully!")
+    print("\nSaved Successfully!\n")
 
 def printInfo():
     print("\n--------------- Input Status ------------------\n")
