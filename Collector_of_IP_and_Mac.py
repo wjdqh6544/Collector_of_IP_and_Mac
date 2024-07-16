@@ -19,6 +19,7 @@ def main():
     getUserInfo()
     printInfo()
     saveInfo()
+    os.system('pause')
 
 def saveInfo():
     if (os.path.isfile(FILE) == False):

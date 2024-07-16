@@ -24,6 +24,7 @@ def main():
         print("Integrating IP Information from .txt to .xlsx... (" + str(i+1) + "/" + str(Length) + ")")
     f.close()
     print("\nIntegrated Successfully!\n")
+    os.system('pause')
 
 def saveInfo(User, UserID, Responsibility, ResponsibilityID, IP, MAC, Building, Room, Phone):
     if (os.path.isfile(Dest_FILE) == False):
