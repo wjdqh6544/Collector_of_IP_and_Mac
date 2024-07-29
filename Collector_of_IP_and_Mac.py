@@ -64,14 +64,14 @@ def getUserInfo():
     while not User:
         User = input("사용자명: ")
     while not UserID:
-        UserID = input("사용자 ID: ")
+        UserID = input("사용자 사번/학번: ")
     Responsibility = input("책임자명 / 사용자와 동일하면 아무것도 입력하지 말고 Enter: ")
     if (Responsibility == ""):
         Responsibility = User
         ResponsibilityID = UserID
     else: 
         while not ResponsibilityID:
-            ResponsibilityID = input("책임자ID: ")
+            ResponsibilityID = input("책임자 사번/학번: ")
     while not Building:
         Building = input("건물명 (1 - E9 / 2 - IT4): ")
         if (Building == "1"):
@@ -81,12 +81,10 @@ def getUserInfo():
         else:
             Building = ""
     while not Room:
-        Room = input("호실: ")
+        Room = int(input("호실: "))
     tmp = input("전화번호 (053-950-xxxx) / 전화번호 대역이 다르면 아무것도 입력하지 말고 Enter: ")
     if not tmp:
-        Phone = ""
-        while not Phone:
-            Phone = input("전화번호: ")
+        Phone = input("전화번호: ")
     else:
         Phone += tmp
 
